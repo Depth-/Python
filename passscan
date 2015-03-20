@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+# coding=utf-8
+import re
+import urllib
+import urllib2
+from bs4 import BeautifulSoup
+
+print "--------------------------------\n" \
+       "LINK:http://routerpasswords.com/\n" \
+       "说明：密码收集爬虫\n" \
+       "作者：雷锋"
+       "--------------------------------"
+
+url ='http://routerpasswords.com'
+req=urllib2.Request(
+    url = url)
+content=urllib2.urlopen(req).read()
+r=re.compile(r'<option value=\"(.*?)\"') //设备名字
+html=r.findall(content)
+for i in range(len(html)):
+    data=urllib.urlencode({
+      'findpass':1,
+      'router':html[i],
+      'findpassword':'Finde+Password'
+    })
+    req2=urllib2.Request(
+    url = url,
+    data=data)
+    content2=urllib2.urlopen(req2).read()
+    soup = BeautifulSoup(content2)
+    trs=soup.findAll("table")
+    content4=trs
+    file_object = open('1.html','a+')
+    file_object.write(str(content4))
+    file_object.close()
