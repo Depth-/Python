@@ -58,4 +58,4 @@ while True:
         continue
     print 'length > 3'
     ##从用户处取到输入。判断
-## 5.14 end 
+## 5.14 end
