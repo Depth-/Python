@@ -150,4 +150,10 @@ def printMax(x, y):
 
 printMax(3, 5)
 print printMax.__doc__
+
+print 'maintestno'
+# 与以下内容做对比 ，输出在 defclassß
+
+if __name__ == "__main__":
+    print 'maintestyes'
 #文档输出
