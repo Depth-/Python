@@ -57,7 +57,7 @@ else:
 
 s = 1 #变量当中用引号赋值，相当于字符型
 
-while True:
+while True: #起始一个真条件
     #s = raw_input('Enter something : ')
     s+=1
     if s < 5:

@@ -58,7 +58,7 @@ if'qian' in zd:
 
 print ' \n序列的说明 ------------------------------------------'
 list = ['one', 'two', 'three', 'for']
-#Indexingor 'Subscription' operation p r i n t ' I t em 0 i s' , sh o p l i st [ 0] print'Item1 is',shoplist[1]
+
 print 'is 0',list[0]
 print 'is 1',list[1]
 print 'is 2',list[2]
@@ -87,4 +87,4 @@ if name.find('depth')!=-1:
 
 name2 ='_*_'
 mylist =['one','two','three']
-print name2.join(mylist)     # join 分隔符
+print name2.join(mylist)     # join 分隔符f
