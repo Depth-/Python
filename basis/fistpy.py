@@ -26,7 +26,8 @@ if not os.path.exists(today):
     print '创建目录成功',today #判断路径是否存在
 
 
-zip_command = "zip -qr '%s' %s" %(target, ' '.join(source))# 循环赋值备份 注意空格 第一个 s 引用  第二个使用了自定义s  join循环路径
+zip_command = "zip -qr '%s' %s" %(target, ' '.join(source))
+# 循环赋值备份 注意空格 第一个 s 引用  第二个使用了自定义s  join循环路径
 print zip_command  #第一次报错 因为上面需要备份的路径不是一个文件
 
 if os.system(zip_command)==0: # 如果命令运行成功 返回0  失败返回错误号

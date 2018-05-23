@@ -17,8 +17,6 @@ print 'ens is', end
 print 'dobule is', 2 * (length + wight)
 
 ### 4.控制
-
-
 #depth = raw_input('depth cool or no cool?')
 depth = 'cool'
 
@@ -27,8 +25,8 @@ if depth == "cool":
 else:
     print 'no cool'
 
-### while有一个可选的else从句
-###elif和else  elif==if else则是从句
+### 5.while有一个可选的else从句
+### elif和else  elif==if else则是从句
 
 old ='nianling'
 while old:
@@ -67,8 +65,8 @@ while True: #起始一个真条件
         break
     print 's > 5'
     ##从用户处取到输入。判断
-## 5.14 函数
-## 7函数
+
+### 6函数
 def sayHello():
     print 'Hello World!' # 函数内容 def定义
 sayHello()
@@ -84,7 +82,7 @@ x= 5
 y= 7
 printMax(x, y) # 定义函数的参数的值，比较大小
 
-#局部变量
+### 7.局部变量
 def bigt(qq):
     print 'is',qq
     qq=10
@@ -94,15 +92,14 @@ qq=50
 bigt(qq)  #经过函数后的值会恢复之外的值
 print 'is',qq
 
-#全局变量
+### 7.2全局变量
 print "----------"
 def bigt():
     global qq
     print 'is',qq
     qq=10
     print '后来的值',qq
-
-    #一个函数内的代码默认为一个模块 平级
+#一个函数内的代码默认为一个模块 平级
 
 qq=50
 bigt()  #经过函数后的值不会恢复
@@ -121,9 +118,9 @@ def func(a, b=5, c=10):#定义名字的参数一般叫做关键参数
 func(3, 7)
 func(25, c=24)
 func(c=50, a=100)
-
-
 #return 从函数中返回 或者跳出 或返回一个值
+
+
 def maximum(x, y):
     if x > y:#比较大小 返回值
       return x
