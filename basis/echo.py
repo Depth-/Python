@@ -35,8 +35,8 @@ readlist =p.load(f)     #取存储内容
 print readlist
 
 '''异常'''
+print '----------------------------------------------------'
 s= raw_input('Enter something--> ')
-
 try:
     s =raw_input('test')
 except EOFError :

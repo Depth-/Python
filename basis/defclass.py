@@ -2,10 +2,10 @@
 # coding=utf-8  指定 不指定会报错
 # 模块 5.17
 import sys
-#import hellword
 from hellword import bigt
 
 
+print '----------------------------------------------------'
 
 print 'is：'
 for i in sys.argv:
@@ -19,15 +19,7 @@ print '\n\nThe PYTHONPATH is', sys.path, '\n'
 # import 引用变量需要 模块名.变量名字
 # from sys import argv 直接变量名
 
-#使用模块的__name__
 
-if __name__ == '__main__':
-    print 'This program is being run by itself'
-else:
-    print 'I am being imported from another module'
-#if __name__ == '__main__': 引用外部模块常量，但不执行其中代码块 详情如下
-
-#程序hello1。py hello2.py
 
 #hello2 文件内容————————————————————
 PI = 3.14

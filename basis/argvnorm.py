@@ -34,3 +34,25 @@ if sys.argv[1].startswith('--'): # startswith 判断 1是否匹配--
 else:
     for filename in sys.argv[1:]: # 遍历参数给filename
         readfile(filename)  # 读取这个函数 传递名字
+
+a=sys.argv[1:]
+b=sys.argv[1][2:]  #因为是空值 在进行第二步判断的时候会报错
+c=sys.argv[2:]
+d=sys.argv[1]
+e=sys.argv[0]
+
+print a
+print b
+print c
+print d
+print e
+
+'''
+a 是获取第一个参数开始的所有
+b 是获取第一个参数 忽略掉参数的前2个字节
+c 获取底2个参数开始的所有
+d 获取第一个参数
+e 程序本身
+这其中的0是起始 程序本身
+'''
+
