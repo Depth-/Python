@@ -25,16 +25,16 @@ listfile = 'list'         #将存储对象的文件名称
 list =['one','two','three','for']       # 内容
 
 f =file(listfile,'w')  #以打开一个file对象
-p.dump(list,f) #写存储 list 写入f
+
 f.close()  #关闭这个
 
 del list   #删除内容
 
 f =file(listfile)       #打开一个对象
-readlist =p.load(f)     #取存储内容
-print readlist
+ #取存储内容
 
-'''异常'''
+
+'''异常  里面可以放一些不需要的报错信息 必须加except响应'''
 print '----------------------------------------------------'
 s= raw_input('Enter something--> ')
 try:
