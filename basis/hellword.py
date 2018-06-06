@@ -1,32 +1,31 @@
 #!/usr/bin/env python
 # coding=utf-8  指定 不指定会报错
 
-### 1.开始的python 复习项目
+# 开始的python 复习项目
 print 'Hello World'
 
-### 2.' " ''' 三种引号之间的区别
+# ' " ''' 三种引号之间的区别
 '''
 单引号 =  双引号 > 三引号（一段话）
+字符串中有单引号用双引号 反之
 '''
 
-### 3.一个运算测试
-length = 5
-wight = 2
+#一个运算测试
+length = 5;  wight = 2
 end = length * wight
 print 'ens is', end
 print 'dobule is', 2 * (length + wight)
 
-### 4.控制
+# 控制
 #depth = raw_input('depth cool or no cool?')
 depth = 'cool'
-
 if depth == "cool":
     print 'yes'
 else:
     print 'no cool'
 
-### 5.while有一个可选的else从句
-### elif和else  elif==if else则是从句
+# while有一个可选的else从句
+# elif和else  elif==if else则是从句
 
 old ='nianling'
 while old:
@@ -53,7 +52,8 @@ for i in range(1, 5):
 else:
     print 'The for loop is over'
 
-s = 1 #变量当中用引号赋值，相当于字符型
+s = 1
+#变量当中用引号赋值，相当于字符型
 
 while True: #起始一个真条件
     #s = raw_input('Enter something : ')
@@ -66,7 +66,7 @@ while True: #起始一个真条件
     print 's > 5'
     ##从用户处取到输入。判断
 
-### 6函数
+# 函数
 def sayHello():
     print 'Hello World!' # 函数内容 def定义
 sayHello()
@@ -82,7 +82,7 @@ x= 5
 y= 7
 printMax(x, y) # 定义函数的参数的值，比较大小
 
-### 7.局部变量
+# 局部变量
 def bigt(qq):
     print 'is',qq
     qq=10
@@ -92,25 +92,25 @@ qq=50
 bigt(qq)  #经过函数后的值会恢复之外的值
 print 'is',qq
 
-### 7.2全局变量
+# 全局变量
 print "----------"
 def bigt():
     global qq
     print 'is',qq
     qq=10
     print '后来的值',qq
-#一个函数内的代码默认为一个模块 平级
+# 一个函数内的代码默认为一个模块 平级
 
 qq=50
 bigt()  #经过函数后的值不会恢复
 print 'is',qq
 
-#默认参数
+# 默认参数
 def say(message, times = 1):
     print message * times
 say('Hello')
 say('World', 5)
-#不写即为参数默认，写了之后以自己的为准
+# 不写即为参数默认，写了之后以自己的为准
 
 def func(a, b=5, c=10):#定义名字的参数一般叫做关键参数
     print 'a is', a, 'and b is', b, 'and c is', c
@@ -118,7 +118,7 @@ def func(a, b=5, c=10):#定义名字的参数一般叫做关键参数
 func(3, 7)
 func(25, c=24)
 func(c=50, a=100)
-#return 从函数中返回 或者跳出 或返回一个值
+# return 从函数中返回 或者跳出 或返回一个值
 
 
 def maximum(x, y):
@@ -149,7 +149,8 @@ printMax(3, 5)
 print printMax.__doc__
 
 print 'maintestno'
-# 与以下内容做对比 ，输出在 defclassß
+# 与以下内容做对比 ，输出在 defclass
+
 
 if __name__ == "__main__":
     print 'maintestyes'

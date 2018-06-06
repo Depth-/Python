@@ -1,25 +1,24 @@
 #!/usr/bin/env python
 # coding=utf-8  指定 不指定会报错
-#基本分类  列表   元组    字典
-#  三种 括号代表的区别
+#  基本分类  列表   元组    字典
+#  常用的数据类型有7种  数字 字符串 列表 元组 字典 集合
+#  下面讲 三种 括号代表的区别
 
 print '[] 列表 的说明 可修改 可添加------------------------------------------'
 shoplist = ['apple', 'mango', 'carrot', 'banana']
-
+#定义一个列表
 print '我有', len(shoplist),"内容"
-
 for item in shoplist:
     print item + "循环输出"
 
 shoplist.append('rice')      # 增加内容
 print '现在具有的内容  ', shoplist
 
-shoplist.sort()              # 排序
+shoplist.sort()
 print '排序', shoplist
-
 print '单独取出一个内容', shoplist[0]
-olditem = shoplist[0]
 
+olditem = shoplist[0]
 del shoplist[0]     #删除列表内第一个
 print '删除一个内容',olditem
 print '剩下的内容', shoplist
@@ -49,11 +48,10 @@ print "Tips：print语可以跟着%符号的字符。这些字符具备定制的
       "组必须按照相同的顺序来 对应这些定制。%s 定制后面%开头的输出"
 
 print "My name is %s and weight is %d kg!" % ('Zara', 21)
-'''My name is Zara and weight is 21 kg!
-用法是将一个值插入到一个有字符串格式符 %s 的字符串中'''
+#用法是将一个值插入到一个有字符串格式符 %s 的字符串中
 
-zd['three'] = '1111'   # 新增加一个
-del zd['li']          # 删除一个
+zd['three'] = '1111'   # 增加赋予一个值
+del zd['li']           # 删除一个
 
 print '\n其中的内容%s\n' %len(zd)
 for name, zhi in zd.items():     #循环名字和值两个字段来自zd的值对
@@ -63,39 +61,45 @@ if 'two' in zd:
 
 
 print ' \n序列的说明 ----------------------------------------------------'
-listt = ['one', 'two', 'three', 'for']
 
-print 'is 0',listt[0]
-print 'is 1',listt[1]
-print 'is 2',listt[2]
-print 'is 3',listt[3]
-print 'is -1',listt[-1]
-print 'is -2',listt[-2]
-print "具体的值\n -1代表从后置未开始 0代表从头开始"
+list00 = ['one', 'two', 'three', 'for']
 
-listt = ['one', 'two', 'three', 'for']
-print 'is 1 和 3',listt[1:3]    #[]切片中的数据 是从开始位开始，结束位结束,结束位会排斥在切片之外
-print 'is 2',listt[2]           #输出
-print 'is 1 全部',listt[1:]      #从1开始的全部
-print 'is 1 到 -1',listt[1:-1]   # 平级的 -1 == 3 按照顺序
-print '全部',listt[:]            #全部
-
+print 'is 0',list00[0]
+print 'is 1',list00[1]
+print 'is 2',list00[2]
+print 'is 3',list00[3]
+print 'is -1',list00[-1]
+print 'is -2',list00[-2]
+print 'is 1 和 3',list00[1:3]     # []切片中的数据 是从开始位开始，结束位结束,结束位会排斥在切片之外
+print 'is 2',list00[2]            # 输出
+print 'is 1 全部',list00[1:]       # 从1开始的全部
+print 'is 1 到 -1',list00[1:-1]    # 平级的 -1 == 3 按照顺序
+print '全部',list00[:]             # 全部
+print "具体的值\n -1代表从后置未开始  0代表从头开始"
 
 print '\n字符串的方法 ----------------------------------------------------'
+# [1:2:3] 头：尾：间隔
+# 字符串的切片对比
+'''
+h    e   l  l  o     w  o  r  l  d
+0    1   2  3  4  5  6  7  8  9  10
+-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
+'''
+
 
 name =  "kukudedepth"
 
 if name.startswith('kukude'):
-    print 'yes1 '  # 是否是kukude 开始
+    print 'yes1 '  # 是否是kukude开始
 if 'kukude' in name:
     print 'yes2'   # 是否存在
 if name.find('depth')!=-1:
-    print 'yes3'   # 查找指定字符串再另一个字符串的位置或返回-1代表找不到w
+    print 'yes3'   # 查找指定字符串在另一个字符串的位置或返回-1代表找不到
 
 name2 ='_*_'
-
 mylist =['one','two','three']
-print name2.join(mylist)     # join 分隔符加入
+print name2.join(mylist)
+# join分割符，循环加入字符串与列表内容
 
 
 '''
@@ -107,9 +111,9 @@ list01 = ['runoob', 786, 2.23, 'john', 70.2]
 list02 = [123, 'john']
 
 # 列表截取
-print list01[0]
-print list01[-1]
-print list01[0:3]
+print list01[0]   #从头
+print list01[-1]  #从尾
+print list01[0:3] #切片
 
 # 列表重复
 print list01 * 2
@@ -119,13 +123,13 @@ print list01 + list02
 
 # 获取列表长度
 print len(list01)
-# 删除列表元素
 
+# 删除列表元素
 del list02[0]
 print list02
 
 # 元素是否存在于列表中
-print 'john' in list02  # True
+print 'john' in list02
 
 # 迭代
 for i in list01:
@@ -176,12 +180,13 @@ print list03
 # 对原列表进行排序
 list03.sort()
 
-'''
-元组
-----------------------------------------------------------
-'''
+print '元组----------------------------------------------------------'
 tu = ("alex", [11, 22, {"k1": 'v1', "k2": ["age", "name"], "k3": (11,22,33)}, 44])
 tu[1][2]["k2"].append("seven")
+# 在tu元祖当中第一位置的第二位置的K2字典增加一个
+print tu[0]
+print tu[1]
+print tu[1][2]
 print(tu[1][2]["k2"])
 # 元组的一级元素不可被修改增加删除但可以修改二级后的。如修改元祖中列表，字典等内容
 
@@ -194,12 +199,13 @@ dictionary = {}
 flag = 'a'
 pape = 'a'
 off = 'a'
+# 往字典中添加数据
 while flag == 'a' or 'c' :
     flag = raw_input("添加或查找单词 ?(a/c)")
     if flag == "a" :                             # 开启
         word = raw_input("输入单词(key):")
         defintion = raw_input("输入定义值(value):")
-        dictionary[str(word)] = str(defintion)  # 添加字典
+        dictionary[str(word)] = str(defintion)  # 添加字典 word = defintion
         print "添加成功!"
         pape = raw_input("您是否要查找字典?(a/0)")   #read
         if pape == 'a':
