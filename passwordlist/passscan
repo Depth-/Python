@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 print "--------------------------------\n"  \
        "LINK:http://routerpasswords.com/\n" \
        "说明：密码收集爬虫\n"                  \
-       "作者：雷锋 后续继续改进文字类型\n"                         \
+       "作者：雷锋 后续继续改进文字类型\n"       \
        "--------------------------------"
 
 url ='http://routerpasswords.com'
