@@ -28,7 +28,3 @@ for i in htm:
     file_object = open('Userpass.html', 'a+')
     file_object.write(str(strs))        # 写入 关闭
     file_object.close()
-
-
-
-
