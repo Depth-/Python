@@ -1,7 +1,8 @@
-Python
-学习的项目简介
+#### Python
+`我的学习的项目简介`
 
-###1.passwordlist
-是一个收集设备密码的爬虫
-###2.basis
-基础python语法学习的笔记
+### basis
+一个根据简明Python教程做的学习笔记，平时会查漏补缺，增加一些小Tips.
+
+### passwordlist
+是一个收集设备密码的爬虫,爬取网络设备的账号密码存下来
