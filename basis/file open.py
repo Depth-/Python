@@ -87,5 +87,3 @@ while True:
         break
     print line
 f.close() #关闭文件
-
-

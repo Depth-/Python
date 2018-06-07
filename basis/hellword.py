@@ -14,7 +14,7 @@ print 'Hello World'
 length = 5;  wight = 2
 end = length * wight
 print 'ens is', end
-print 'dobule is', 2 * (length + wight)
+print 'yun is', 2 * (length + wight)
 
 # 控制
 #depth = raw_input('depth cool or no cool?')
@@ -24,10 +24,12 @@ if depth == "cool":
 else:
     print 'no cool'
 
-# while有一个可选的else从句
+# for 迭代变量 in 序列： 序列一个一个的分组，字符串就是一个一个的字母 列表就是一个一个的词
+# while 有一个可选的else从句
 # elif和else  elif==if else则是从句
+# pass 占位符 代码桩
 
-old ='nianling'
+old ='old'
 while old:
     number='22'
     #age = raw_input('age?')
@@ -88,8 +90,7 @@ def bigt(qq):
     qq=10
     print '后来的值',qq
 
-qq=50
-bigt(qq)  #经过函数后的值会恢复之外的值
+qq=50;    bigt(qq)  #经过函数后的值会恢复之外的值
 print 'is',qq
 
 # 全局变量
