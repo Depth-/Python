@@ -20,10 +20,8 @@ if len(sys.argv)<2: # 判断超过了参数
     print '未指定动作'
     sys.exit()
 
-
 if sys.argv[1].startswith('--'): # startswith 判断 1是否匹配--
     option = sys.argv[1][2:] #等于2向后的部分表示取第一个命令行参数，但是去掉前两个字节
-
     if option == 'version':
         print 'Version 110'
     elif option == 'help':
@@ -40,7 +38,6 @@ b=sys.argv[1][2:]  #因为是空值 在进行第二步判断的时候会报错
 c=sys.argv[2:]
 d=sys.argv[1]
 e=sys.argv[0]
-
 print a
 print b
 print c

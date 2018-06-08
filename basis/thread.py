@@ -2,6 +2,8 @@
 # coding=utf-8
 import thread
 import time
+import threading
+import Queue
 
 def print_time(threadName, delay):
     count = 0
@@ -18,12 +20,7 @@ except:
     print "线程创建失败"
 
 
-
-
-import threading
-import time
-
-
+print '-----------case--------------------------'
 class myThread(threading.Thread):
     def __init__(self, threadID, name, counter):
         threading.Thread.__init__(self)
@@ -41,13 +38,11 @@ class myThread(threading.Thread):
         # 释放锁
         threadLock.release()
 
-
 def print_time(threadName, delay, counter):
     while counter:
         time.sleep(delay)
         print "%s: %s" % (threadName, time.ctime(time.time()))
         counter -= 1
-
 
 threadLock = threading.Lock()
 threads = []
@@ -69,13 +64,9 @@ for t in threads:
     t.join()
 print "Exiting Main Thread"
 
-import Queue
-import threading
-import time
 
+print '-----------case--------------------------'
 exitFlag = 0
-
-
 class myThread(threading.Thread):
     def __init__(self, threadID, name, q):
         threading.Thread.__init__(self)
@@ -88,7 +79,6 @@ class myThread(threading.Thread):
         process_data(self.name, self.q)
         print "Exiting " + self.name
 
-
 def process_data(threadName, q):
     while not exitFlag:
         queueLock.acquire()
@@ -99,7 +89,6 @@ def process_data(threadName, q):
         else:
             queueLock.release()
         time.sleep(1)
-
 
 threadList = ["Thread-1", "Thread-2", "Thread-3"]
 nameList = ["One", "Two", "Three", "Four", "Five"]
