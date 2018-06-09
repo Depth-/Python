@@ -16,3 +16,7 @@ from package_runoob.runoob1 import runoob1
 from package_runoob.runoob2 import runoob2
 
 '''
+
+# __init__ 包文件  如何导入
+# from 路径.模块 import 函数
+# imp.reload 模块重载

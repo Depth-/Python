@@ -2,13 +2,18 @@
 # coding=utf-8  指定 不指定会报错
 # 模块 5.17
 import sys
+# import 模块
+# import 模块 as 别名
+# form 模块 import 函数名类名
+
+# pyc 文件是给机器看的，如果不想公开源代码 可以 python -m py_compile file.py 编译
 
 print '函数类 学习----------------------------------------------------'
 # 定义函数 这里写了了一个必备参数
 def print_me(str):# 括号内的内容是可控的 str只是一个标签 没有具体的对象的值
     "打印任何传入的字符串"
     print str
-    return
+    return  # 执行后函数内代码终止
 
 # 调用函数
 print_me("我要调用用户自定义函数!")
@@ -54,6 +59,7 @@ def print_info(arg1, *var_tuple): # 可写函数说明
     return
 
 # 加了星号（*）的变量名会存放所有未命名的变量参数
+# 第二种*号的用法，如何函数内传递的是一个列表或者元组的数据 print_info(*参数) 这里会自动把数据进行拆分
 # 调用print_info 函数
 print_info(10)
 print_info(70, 60, 50)
@@ -108,7 +114,7 @@ print '经过函数后的值会恢复之前的初始的值',qq
 # 全局变量
 print "\n---------------------------------------------------------------"
 def my_qq():
-    global qq
+    global qq   # 需要在函数内提前声明
     print '初始值：',qq
     qq=10
     print '后来的值：',qq
@@ -124,6 +130,8 @@ def say(message, times = 1):
 say('Hello ')
 say('World ', 5)
 # 不写即为参数默认，写了之后以自己的为准
+# def say 里面的message 为形式参数 times 为默认参数
+# say('hello') 中的hello 是实际参数
 
 def func(a, b=5, c=10):#定义名字的参数一般叫做关键参数
     print '一是', a, '二是', b, '三是', c
@@ -147,3 +155,6 @@ print maximum.__doc__
    它通常被简称为 docstrings 。DocStrings是一个 重要的工具，由于它帮助
    你的程序文档更加简单易懂，你应该尽量使用它。你甚至可以在程序 运行的时候，
    从函数恢复文档字符串!'''
+
+print '\n 内建函数 ----------------------------------------------------'
+

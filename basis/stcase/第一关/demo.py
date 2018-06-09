@@ -22,5 +22,13 @@ def rand_str(num,length=8): #定义次数与长度
         cur.execute(sql) # 执行sql语句
         conn.commit()    # 提交到数据库
 
+a = random.randint(48,57)
+b = random.randint(65,90)
+c = random.randint(97,122)
+d = random.randint(100,200)
+print chr(a)+chr(b)+chr(c)+chr(d)
+
 if __name__ =='__main__':
-    rand_str(5)  #自己生效
+    pass
+# 自己生效
+rand_str(5)
