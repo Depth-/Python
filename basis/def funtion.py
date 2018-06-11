@@ -7,6 +7,7 @@ import sys
 # form 模块 import 函数名类名
 
 # pyc 文件是给机器看的，如果不想公开源代码 可以 python -m py_compile file.py 编译
+# 装饰器 本质 传递函数 拿到一个函数进行处理在返回一个函数
 
 print '函数类 学习----------------------------------------------------'
 # 定义函数 这里写了了一个必备参数
@@ -157,4 +158,30 @@ print maximum.__doc__
    从函数恢复文档字符串!'''
 
 print '\n 内建函数 ----------------------------------------------------'
+print '\n lambda   ---------------------------------------------------'
+# lambda 一种快速定义单行的最小函数
+MAXIMUM = lambda x, y: (x > y) * x + (x < y) * y
+MINIMUM = lambda x, y: (x > y) * y + (x < y) * x
+a = 10
+b = 20
+print 'The largar one is %d' % MAXIMUM(a, b)
+print 'The lower one is %d' % MINIMUM(a, b)
 
+print '\n 装饰器   ----------------------------------------------------'
+# 函数前面增加 @函数名  意味着此函数需要用@函数进行装饰处理
+
+print '\n 闭包    ----------------------------------------------------'
+# 函数当中嵌套一个函数 调用上层函数的参数 返回一个函数 返回的函数一直会调用上级函数的参数进行工作
+
+def hello_config(fix):
+    def hello(name):
+        print fix,name
+    return hello
+
+s = hello_config('你好')
+s('Depth')
+print s.__name__
+
+b = hello_config('你们好')
+b('We')
+print b.__name__
