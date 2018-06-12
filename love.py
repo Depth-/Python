@@ -2,6 +2,7 @@
 # coding=utf-8
 import numpy as np
 import matplotlib.pyplot as mp
+# 无聊画爱心的脚本
 
 x_coords = np.linspace(-100,100,500)
 y_coords = np.linspace(-100,100,500)

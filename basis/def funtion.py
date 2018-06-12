@@ -158,6 +158,7 @@ print maximum.__doc__
    从函数恢复文档字符串!'''
 
 print '\n 内建函数 ----------------------------------------------------'
+
 print '\n lambda   ---------------------------------------------------'
 # lambda 一种快速定义单行的最小函数
 MAXIMUM = lambda x, y: (x > y) * x + (x < y) * y
@@ -169,10 +170,22 @@ print 'The lower one is %d' % MINIMUM(a, b)
 
 print '\n 装饰器   ----------------------------------------------------'
 # 函数前面增加 @函数名  意味着此函数需要用@函数进行装饰处理
+def a(b):
+    print b
+def b():
+    pass
+a(b)
+print '使用装饰器输出'
+# 装饰器版
+def a(b):
+    print(b)
+@a # 定义 a 函数为 b 函数的装饰器
+def b():
+    pass
+b  # 等于 a(b)()
 
-print '\n 闭包    ----------------------------------------------------'
+print  '\n 闭包    ----------------------------------------------------'
 # 函数当中嵌套一个函数 调用上层函数的参数 返回一个函数 返回的函数一直会调用上级函数的参数进行工作
-
 def hello_config(fix):
     def hello(name):
         print fix,name
@@ -185,3 +198,41 @@ print s.__name__
 b = hello_config('你们好')
 b('We')
 print b.__name__
+print '\ncase2'
+def f():
+    global n
+    n = 0
+    def add(): # 子函数，每次给父函数 +1 | 闭包
+        # nonlocal n
+        global n
+        n = n + 1
+        print(n)
+    return add
+'''nonlocal是Python3新增的作用域关键词。Python对闭包的支持一直不是很完美，
+在 Python2 中，闭包函数可以读取到父级函数的变量，但是无法修改变量的值，为此，
+我们经常要把变量声明为global全局变量，这样就打破了闭包的性质。为了解决这个问题，
+Python3 引入了nonlocal，如上例代码，我们使用声明了nonlocal n之后，就可以正常操作'''
+
+add = f()
+add()
+add()
+add()
+
+print '\n 生成器   ----------------------------------------------------'
+# 生成器是一种惰性的序列，如果我们需要创建一个 0～1000000000 的序列，
+# 这样大的序列创建出来会占用比较多的内存，生成器就是为了解决这样的问题，
+# 可以让我们边使用边生成数据，在Python中，生成器的构造，依靠函数来完成。
+# 生成器
+def f():
+    for x in range(10):
+        yield x  # 返回并记录函数状态
+# next
+f = f()
+print next(f)  # 每调用一次next，就执行一次yield | 依靠这种需要才生产的工作机制，大大的节省资源
+print next(f)
+print next(f)
+print '间隔'
+
+# for next
+for x in range(7): # 上面已经输出过3个了，总量为10
+    print next(f)  # 超出则会出现异常
