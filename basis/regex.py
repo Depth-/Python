@@ -39,3 +39,4 @@ a = re.split('\W+', ' one, two, three.', 1) # 分隔一次
 print a
 a = re.split('a*', 'hello world')  # 对于一个找不到匹配的字符串而言，split 不会对其作出分割
 print a
+# 零宽断言的一个应用

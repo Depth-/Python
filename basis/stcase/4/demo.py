@@ -14,7 +14,7 @@ def geturl(url):
 def get_img(html):
     reg ='src="(.*?\.jpg)" size="\d+" width="500" height="500"' # 括号内标识一个分组 compile 返回结果为分组内的内容
     img_re = re.compile(reg)
-    weather_list = img_re.findall(html)
+    weather_list = img_re.findall(html) # findall 优先返回分组内的内容
     i = 0
     for img_url in weather_list:
         print img_url

@@ -6,3 +6,6 @@
 
 ### passwordlist
 是一个收集设备密码的爬虫,爬取网络设备的账号密码存下来
+
+### GUI
+Python GUI 相关

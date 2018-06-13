@@ -3,7 +3,6 @@
 import sys
 import re
 
-
 """
    Name: name.py read
    欢迎使用一个日志处理小脚本
