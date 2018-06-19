@@ -84,3 +84,10 @@ except EOFError :
     sys.exit()
 except:
     print 'echo'
+
+# 抛出异常
+
+
+raise NameError('异常抛出')
+
+assert len(),'异常'
