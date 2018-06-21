@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 import os
+
 ''' 两者的区别 input 可以接受表达式 另外一个只是字符串
 raw_input:input
 Python3 当中只剩input
@@ -18,7 +19,7 @@ print "你输入的内容是: ", str
 # s.readline(5) 读取一行的5个字节
 # s.readlines() 读取一个列表
 
-fo = open("foo.txt", "w") # 部分模式说明 w 写 w+ 读写 a 追加 a+ 读写 r+ 打开一个文件 指针从头开始
+fo = open("foo.txt", "w")  # 部分模式说明 w 写 w+ 读写 a 追加 a+ 读写 r+ 打开一个文件 指针从头开始
 print "文件名: ", fo.name
 print "是否已关闭 : ", fo.closed
 print "访问模式 : ", fo.mode
@@ -48,24 +49,24 @@ print "重新读取字符串 : ", str
 # 关闭打开的文件
 fo.close()
 
-#删除 重命名 新建
+# 删除 重命名 新建
 os.mkdir("newdir")
-os.rename( "foo.txt","test.txt")
+os.rename("foo.txt", "test.txt")
 os.remove("test.txt")
 os.rmdir("newdir")
 
 text = '''这是一段大的文本，真的很大'''
-f = file('open.txt','w') # 写一个文件
-f.write(text) #写内容
-f.close() #关闭文件
+f = file('open.txt', 'w')  # 写一个文件
+f.write(text)  # 写内容
+f.close()  # 关闭文件
 
-f = file('open.txt') #如果不指定r 默认为读
+f = file('open.txt')  # 如果不指定r 默认为读
 while True:
-    line = f.readline() #读取文件的每一行
-    if len(line)==0: #读到空的时候跳出，然后输出
+    line = f.readline()  # 读取文件的每一行
+    if len(line) == 0:  # 读到空的时候跳出，然后输出
         break
     print line
-f.close() #关闭文件
+f.close()  # 关闭文件
 
 try:
     '正常的操作'
@@ -78,8 +79,8 @@ else:
 print '----------------------------------------------------'
 s = raw_input('Enter something--> ')
 try:
-    s =raw_input('test')
-except EOFError :
+    s = raw_input('test')
+except EOFError:
     print '异常操作'
     sys.exit()
 except:
@@ -90,4 +91,4 @@ except:
 
 raise NameError('异常抛出')
 
-assert len(),'异常'
+assert len(), '异常'

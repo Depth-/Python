@@ -5,22 +5,25 @@ import time
 import threading
 import Queue
 
+
 def print_time(threadName, delay):
     count = 0
     while count < 5:
         time.sleep(delay)
         count += 1
-        print "%s: %s" % ( threadName,time.ctime(time.time()))
+        print "%s: %s" % (threadName, time.ctime(time.time()))
 
-#创建两个线程
+
+# 创建两个线程
 try:
-    thread.start_new(print_time,("线程1",2))
-    thread.start_new(print_time,("线程2",4))
+    thread.start_new(print_time, ("线程1", 2))
+    thread.start_new(print_time, ("线程2", 4))
 except:
     print "线程创建失败"
 
-
 print '-----------case--------------------------'
+
+
 class myThread(threading.Thread):
     def __init__(self, threadID, name, counter):
         threading.Thread.__init__(self)
@@ -38,11 +41,13 @@ class myThread(threading.Thread):
         # 释放锁
         threadLock.release()
 
+
 def print_time(threadName, delay, counter):
     while counter:
         time.sleep(delay)
         print "%s: %s" % (threadName, time.ctime(time.time()))
         counter -= 1
+
 
 threadLock = threading.Lock()
 threads = []
@@ -64,9 +69,10 @@ for t in threads:
     t.join()
 print "Exiting Main Thread"
 
-
 print '-----------case--------------------------'
 exitFlag = 0
+
+
 class myThread(threading.Thread):
     def __init__(self, threadID, name, q):
         threading.Thread.__init__(self)
@@ -79,6 +85,7 @@ class myThread(threading.Thread):
         process_data(self.name, self.q)
         print "Exiting " + self.name
 
+
 def process_data(threadName, q):
     while not exitFlag:
         queueLock.acquire()
@@ -89,6 +96,7 @@ def process_data(threadName, q):
         else:
             queueLock.release()
         time.sleep(1)
+
 
 threadList = ["Thread-1", "Thread-2", "Thread-3"]
 nameList = ["One", "Two", "Three", "Four", "Five"]

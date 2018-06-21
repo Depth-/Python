@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 
 data = 110
+
+
 def main():
-    print  "data",data
+    print  "data", data
+
 
 if __name__ == '__main__':
     main()

@@ -10,8 +10,9 @@ print 'Hello World'
 字符串中有单引号用双引号 反之
 '''
 
-#一个运算测试
-length = 5;  wight = 2
+# 一个运算测试
+length = 5
+wight = 2
 end = length * wight
 print 'ens is', end
 print 'yun is', 2 * (length + wight)
@@ -28,24 +29,24 @@ else:
 # elif 和 else  elif==if else则是从句
 # pass 占位符 代码桩
 
-old ='old'
+old = 'old'
 while old:
     num = '22'
     age = '23'
     if age == num:
         print 'yes'
     elif age < num:
-            print 'small'
+        print 'small'
     elif age > num:
-           print 'big'
-           break
+        print 'big'
+        break
 
 count = 0
 while count < 5:
-   print count, "值 < 5"
-   count = count + 1
+    print count, "值 < 5"
+    count = count + 1
 else:
-   print count, "值 >= 5"
+    print count, "值 >= 5"
 
 for i in range(1, 5):
     print i
@@ -53,10 +54,10 @@ else:
     print '循环结束'
 
 s = 1
-#变量当中用引号赋值，相当于字符型
+# 变量当中用引号赋值，相当于字符型
 
-while True: # 起始一个真条件
-    s+=1 # 加1
+while True:  # 起始一个真条件
+    s += 1  # 加1
     if s < 5:
         print 's < 5'
         continue  # 截至剩下的代码块 重新循环

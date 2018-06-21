@@ -24,13 +24,11 @@ data = '''
         b, 0.000140'''
 result = {}
 
-for line in data.splitlines(): # 按照行读取lines
-    if not line:   # 判断是否为NONE
-        continue   # 判断为空跳出循环
-    key, value = line.split(",") # 切割赋值
-    result.setdefault(key, []).append(float(value)) # 分类 设定key为键值，后面逐行加如 数值为浮点数
+for line in data.splitlines():  # 按照行读取lines
+    if not line:  # 判断是否为NONE
+        continue  # 判断为空跳出循环
+    key, value = line.split(",")  # 切割赋值
+    result.setdefault(key, []).append(float(value))  # 分类 设定key为键值，后面逐行加如 数值为浮点数
 
-for key, values in result.items(): # 遍历字典
-    print key, sum(values), sum(values) / len(values),len(values)
-
-
+for key, values in result.items():  # 遍历字典
+    print key, sum(values), sum(values) / len(values), len(values)

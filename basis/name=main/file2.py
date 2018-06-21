@@ -2,15 +2,18 @@
 # -*- coding: utf-8 -*-
 
 from file1 import data
+
 '''引用文件1里面的一个变量'''
 
 data2 = 120
+
 
 def com():
     if data < data2:
         print "1小于2"
     else:
         print "2大于1"
+
 
 com()
 

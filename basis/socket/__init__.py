@@ -5,16 +5,15 @@
 
 '''
 test.py
-package_runoob
+package_boom
 |-- __init__.py
-|-- runoob1.py
-|-- runoob2.py
+|-- boom1.py
+|-- boom2.py
 结构
 
 调用方法 test.py
-from package_runoob.runoob1 import runoob1
-from package_runoob.runoob2 import runoob2
-
+from package_boom.boom1 import boom1
+from package_boom.boom2 import boom2
 '''
 
 # __init__ 包文件  如何导入
